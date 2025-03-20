@@ -47,7 +47,7 @@ if response.status_code == 200:
         # Save to a CSV file
         filename = "ibani_bible_verses.csv"
         with open(filename, mode="w", newline="", encoding="utf-8") as file:
-            writer = csv.writer(file)
+            writer = csv.writer(file, delimiter="\t")
             writer.writerow(["Verse", "Ibani Text"])  # Header
             writer.writerows(verse_data)
 
